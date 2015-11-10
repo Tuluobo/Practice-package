@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, CardIOPaymentViewControllerDelegate {
 
     // 视频捕捉会话
     var session = AVCaptureSession()
@@ -177,6 +177,24 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         session.startRunning()
         reScanBtn.enabled = false
     }
+
+    func userDidCancelPaymentViewController(paymentViewController: CardIOPaymentViewController!) {
+        self.labelResult.text = "用户取消了卡扫描..."
+        paymentViewController.dismissViewControllerAnimated(true, completion: nil)
+    }
     
+    func userDidProvideCreditCardInfo(cardInfo: CardIOCreditCardInfo!, inPaymentViewController paymentViewController: CardIOPaymentViewController!) {
+        if let card = cardInfo {
+            self.labelResult.text = "卡号：\(card.cardNumber) 卡类型:\(card.cardType) 过期时间：\(card.expiryMonth)/\(card.expiryYear) CVV:\(card.cvv)"
+        }
+        paymentViewController.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func scanCard(sender: UIBarButtonItem) {
+        
+        let cardVC = CardIOPaymentViewController(paymentDelegate: self)
+        cardVC.modalPresentationStyle = UIModalPresentationStyle.FormSheet
+        presentViewController(cardVC, animated: true, completion: nil)
+    }
 }
 
