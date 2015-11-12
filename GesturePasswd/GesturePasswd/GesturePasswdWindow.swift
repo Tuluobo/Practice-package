@@ -173,7 +173,9 @@ class GesturePasswdWindow: UIWindow {
             btn.selected = false
         }
         // 处理当前类型的密码
-        self.passwdHandle()
+        if self.btnSelectArr.count > 0{
+            self.passwdHandle()
+        }
         self.btnSelectArr.removeAll()
         self.setNeedsDisplay()
     }
@@ -183,22 +185,22 @@ class GesturePasswdWindow: UIWindow {
     //需要做自己的处理逻辑的请在这里修改
     private func passwdHandle(){
         let dataHandle = DataHandle.sharedInstance
+        
+        let newpassword = self.getNumberWithBtn()
+        if newpassword.count < 4 {
+            let alert = UIAlertController(title: "手势密码", message: "手势密码不能小于4位", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.rootViewController?.presentViewController(alert, animated: true, completion: nil)
+        }
+        
         switch self.gestureType! {
         case .SETPWD:
-            let password = self.getNumberWithBtn()
-            if password.count > 3{
-                dataHandle.savePasswd(UserKey.CACHEPWD, password: password)
-                self.gestureType = .SETPWD2
-            } else {
-                let alert = UIAlertController(title: "手势密码", message: "手势密码不能小于4位", preferredStyle: UIAlertControllerStyle.Alert)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-                self.rootViewController?.presentViewController(alert, animated: true, completion: nil)
-            }
+            dataHandle.savePasswd(UserKey.CACHEPWD, password: newpassword)
+            self.gestureType = .SETPWD2
         case .SETPWD2:
-            let password2 = self.getNumberWithBtn()
             if let password = dataHandle.hasPasswd(UserKey.CACHEPWD) {
-                if password2.elementsEqual(password) {
-                    dataHandle.savePasswd(UserKey.PASSWORD, password: password2)
+                if newpassword.elementsEqual(password) {
+                    dataHandle.savePasswd(UserKey.PASSWORD, password: newpassword)
                     dataHandle.deletePasswd(UserKey.CACHEPWD)
                     self.degelete.setPwdSuccess()
                 } else {
@@ -208,19 +210,16 @@ class GesturePasswdWindow: UIWindow {
                 }
             }
         case .CHECK:
-            let password2 = self.getNumberWithBtn()
             if let password = dataHandle.hasPasswd(UserKey.PASSWORD) {
-                if password2.elementsEqual(password) {
+                if newpassword.elementsEqual(password) {
                     self.degelete.checkPwdSuccess()
                 } else {
                     self.degelete.checkPwdFailed()
                 }
             }
         case .RESET:
-            let password2 = self.getNumberWithBtn()
             if let password = dataHandle.hasPasswd(UserKey.PASSWORD) {
-                if password2.elementsEqual(password) {
-                    dataHandle.deletePasswd(UserKey.PASSWORD)
+                if newpassword.elementsEqual(password) {
                     self.gestureType = .SETPWD
                 } else {
                     self.degelete.checkPwdFailed()
