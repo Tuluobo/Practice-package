@@ -15,8 +15,7 @@
 		D277ABDB1BECAA0F00A44D97 /* GesturePasswdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D277ABDA1BECAA0F00A44D97 /* GesturePasswdTests.swift */; };
 		D277ABE61BECAA0F00A44D97 /* GesturePasswdUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D277ABE51BECAA0F00A44D97 /* GesturePasswdUITests.swift */; };
 		D277ABF51BECAA6E00A44D97 /* GesturePasswdWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D277ABF41BECAA6E00A44D97 /* GesturePasswdWindow.swift */; };
-		D2A143871BECE69100F46264 /* CTDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A143861BECE69100F46264 /* CTDisplayView.swift */; };
-		D2B11F321BED98330002FDDB /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B11F311BED98330002FDDB /* WebViewController.swift */; };
+		D2EBF2F21BF47C0700D257B7 /* DataHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EBF2F11BF47C0700D257B7 /* DataHandle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +50,7 @@
 		D277ABE51BECAA0F00A44D97 /* GesturePasswdUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesturePasswdUITests.swift; sourceTree = "<group>"; };
 		D277ABE71BECAA0F00A44D97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D277ABF41BECAA6E00A44D97 /* GesturePasswdWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GesturePasswdWindow.swift; sourceTree = "<group>"; };
-		D2A143861BECE69100F46264 /* CTDisplayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTDisplayView.swift; sourceTree = "<group>"; };
-		D2B11F311BED98330002FDDB /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		D2EBF2F11BF47C0700D257B7 /* DataHandle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataHandle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +101,10 @@
 		D277ABC41BECAA0F00A44D97 /* GesturePasswd */ = {
 			isa = PBXGroup;
 			children = (
-				D277ABC71BECAA0F00A44D97 /* ViewController.swift */,
 				D277ABC51BECAA0F00A44D97 /* AppDelegate.swift */,
-				D277ABF41BECAA6E00A44D97 /* GesturePasswdWindow.swift */,
-				D2A143861BECE69100F46264 /* CTDisplayView.swift */,
-				D2B11F311BED98330002FDDB /* WebViewController.swift */,
+				D277ABC71BECAA0F00A44D97 /* ViewController.swift */,
 				D277ABC91BECAA0F00A44D97 /* Main.storyboard */,
+				D2EBF2F01BF47BBD00D257B7 /* GesturePassword */,
 				D277ABF31BECAA2A00A44D97 /* Supporting Files */,
 			);
 			path = GesturePasswd;
@@ -140,6 +136,15 @@
 				D277ABD11BECAA0F00A44D97 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D2EBF2F01BF47BBD00D257B7 /* GesturePassword */ = {
+			isa = PBXGroup;
+			children = (
+				D2EBF2F11BF47C0700D257B7 /* DataHandle.swift */,
+				D277ABF41BECAA6E00A44D97 /* GesturePasswdWindow.swift */,
+			);
+			name = GesturePassword;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,9 +279,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D277ABC81BECAA0F00A44D97 /* ViewController.swift in Sources */,
+				D2EBF2F21BF47C0700D257B7 /* DataHandle.swift in Sources */,
 				D277ABC61BECAA0F00A44D97 /* AppDelegate.swift in Sources */,
-				D2A143871BECE69100F46264 /* CTDisplayView.swift in Sources */,
-				D2B11F321BED98330002FDDB /* WebViewController.swift in Sources */,
 				D277ABF51BECAA6E00A44D97 /* GesturePasswdWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +424,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = GesturePasswd/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tuluobo.GesturePasswd;
@@ -434,6 +439,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = GesturePasswd/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tuluobo.GesturePasswd;

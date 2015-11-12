@@ -33,7 +33,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     }
 
-    func applicationDidBecomeActive(application: UIApplication) { }
+    func applicationDidBecomeActive(application: UIApplication) {
+        let gesturePwd =  GesturePasswdWindow.sharedInstance
+        if let _ = DataHandle.sharedInstance.hasPasswd(UserKey.PASSWORD) {
+            gesturePwd.gestureType = .CHECK
+        } else {
+            gesturePwd.gestureType = .SETPWD
+        }
+        gesturePwd.show()
+    }
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
