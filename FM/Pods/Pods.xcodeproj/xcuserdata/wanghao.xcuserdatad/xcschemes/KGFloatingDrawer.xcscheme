@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'CF55CFE68585E36B0697C7BE'
+               BlueprintIdentifier = '6B626CE98B4422AB5EFBC0EB'
                BlueprintName = 'KGFloatingDrawer'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'KGFloatingDrawer.framework'>

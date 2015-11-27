@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cloud View Controller-->
+        <scene sceneID="teF-NY-j0e">
+            <objects>
+                <viewController storyboardIdentifier="cloud" id="rAo-Au-31s" customClass="CloudViewController" customModule="FM" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TXk-1S-WaQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="aCh-4U-x63"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ou0-hK-DVd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YmP-qC-pbQ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play_disc" translatesAutoresizingMaskIntoConstraints="NO" id="gdB-kz-gCG" customClass="PlayImageView" customModule="FM" customModuleProvider="target">
+                                <rect key="frame" x="160.5" y="160" width="280" height="280"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="T2m-rS-BfE"/>
+                                    <constraint firstAttribute="width" constant="280" id="g8L-tj-GoK"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YmP-qC-pbQ" firstAttribute="top" secondItem="ou0-hK-DVd" secondAttribute="topMargin" id="CHB-bD-6Jo"/>
+                            <constraint firstItem="YmP-qC-pbQ" firstAttribute="leading" secondItem="ou0-hK-DVd" secondAttribute="leadingMargin" constant="-20" id="GWc-uS-BFg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YmP-qC-pbQ" secondAttribute="trailing" constant="-20" id="VFE-Uy-xDp"/>
+                            <constraint firstItem="gdB-kz-gCG" firstAttribute="centerX" secondItem="ou0-hK-DVd" secondAttribute="centerX" id="XZ6-ko-OPA"/>
+                            <constraint firstItem="aCh-4U-x63" firstAttribute="top" secondItem="YmP-qC-pbQ" secondAttribute="bottom" id="plh-MI-dcI"/>
+                            <constraint firstItem="gdB-kz-gCG" firstAttribute="centerY" secondItem="ou0-hK-DVd" secondAttribute="centerY" id="x6d-Or-BTS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playQuanImageView" destination="gdB-kz-gCG" id="EWj-QU-y1f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bq9-wB-weh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="754" y="-481"/>
+        </scene>
+        <!--Cloud Channel Table View Controller-->
+        <scene sceneID="z5d-xE-WDc">
+            <objects>
+                <tableViewController storyboardIdentifier="right" id="oq3-sH-doo" customClass="CloudChannelTableViewController" customModule="FM" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8uL-5L-eJ8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="LHP-6z-DOd">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LHP-6z-DOd" id="GyY-IJ-8RH">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="oq3-sH-doo" id="jrN-8s-9xd"/>
+                            <outlet property="delegate" destination="oq3-sH-doo" id="rhW-IT-deX"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iby-L7-jkU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="754" y="198"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="play_disc" width="804" height="804"/>
+    </resources>
+</document>

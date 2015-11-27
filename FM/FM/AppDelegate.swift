@@ -7,18 +7,62 @@
 //
 
 import UIKit
+import KGFloatingDrawer
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    private var _drawerViewController: KGDrawerViewController?
+    var drawerViewController: KGDrawerViewController {
+        get {
+            if let viewController = _drawerViewController {
+                return viewController
+            }
+            return prepareDrawerViewController()
+        }
+    }
 
+    var _aString: String = ""
+    var aString: String {
+        get { return _aString }
+        set { _aString = newValue }
+    }
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window?.rootViewController = drawerViewController
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 
+    private func prepareDrawerViewController() -> KGDrawerViewController {
+        let drawerViewController = KGDrawerViewController()
+        let centerC = viewControllerForStoryboardID("cloud") as! CloudViewController
+        let rightC = viewControllerForStoryboardID("right") as! CloudChannelTableViewController
+        
+        //rightC.delegate = centerC
+        
+        drawerViewController.centerViewController = UINavigationController(rootViewController: centerC)
+        drawerViewController.rightViewController = rightC
+
+        _drawerViewController = drawerViewController
+        
+        let animator = _drawerViewController!.animator
+        animator.animationDuration = 0.7
+        animator.initialSpringVelocity = 1.0
+        animator.springDamping = 5.0
+        
+        return drawerViewController
+    }
+    
+    func viewControllerForStoryboardID(storyboardID: String) -> UIViewController {
+        return UIStoryboard(name: "Cloud", bundle: nil).instantiateViewControllerWithIdentifier(storyboardID)
+    }
+    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
