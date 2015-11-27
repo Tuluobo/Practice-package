@@ -26,6 +26,21 @@ class ViewController: UIViewController, GesturePasswdWindowDelegete {
         gesturePwd.show()
     }
     
+    @IBAction func clearGesturePwd(sender: UIButton) {
+        let pwd = "123456"
+        let alert = UIAlertController(title: "重置手势密码", message: "请输入你的六位安全密码。", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addTextFieldWithConfigurationHandler { (textField: UITextField) -> Void in
+            textField.secureTextEntry = true
+        }
+        alert.addAction(UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "确定", style: UIAlertActionStyle.Default, handler: { (_) -> Void in
+            let passwordTextField = alert.textFields?.first
+            if pwd == passwordTextField!.text {
+                DataHandle.sharedInstance.deletePasswd(UserKey.PASSWORD)
+            }
+        }))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
     func setPwdSuccess() {
         let alert = UIAlertController(title: "手势密码", message: "手势密码设置成功", preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { (_) -> Void in

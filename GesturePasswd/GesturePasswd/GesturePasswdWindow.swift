@@ -188,9 +188,7 @@ class GesturePasswdWindow: UIWindow {
         
         let newpassword = self.getNumberWithBtn()
         if newpassword.count < 4 {
-            let alert = UIAlertController(title: "手势密码", message: "手势密码不能小于4位", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-            self.rootViewController?.presentViewController(alert, animated: true, completion: nil)
+            self.labelTitle.text = "手势密码不能小于4位"
         }
         
         switch self.gestureType! {
@@ -204,9 +202,7 @@ class GesturePasswdWindow: UIWindow {
                     dataHandle.deletePasswd(UserKey.CACHEPWD)
                     self.degelete.setPwdSuccess()
                 } else {
-                    let alert = UIAlertController(title: "手势密码", message: "两次手势密码不一致，请再次绘制！", preferredStyle: UIAlertControllerStyle.Alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-                    self.rootViewController?.presentViewController(alert, animated: true, completion: nil)
+                    self.labelTitle.text = "两次手势密码不一致，请再次绘制！"
                 }
             }
         case .CHECK:
@@ -219,11 +215,14 @@ class GesturePasswdWindow: UIWindow {
             }
         case .RESET:
             if let password = dataHandle.hasPasswd(UserKey.PASSWORD) {
+                print(">>\(password)")
                 if newpassword.elementsEqual(password) {
                     self.gestureType = .SETPWD
                 } else {
                     self.degelete.checkPwdFailed()
                 }
+            } else {
+                self.gestureType = .SETPWD
             }
         }
     }

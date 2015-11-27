@@ -12,7 +12,7 @@ import MediaPlayer
 let channel_url = "http://www.douban.com/j/app/radio/channels"
 let song_url = "http://douban.fm/j/mine/playlist?channel="
 
-class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, HttpProtocol {
+class MainViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate, HttpProtocol {
     
     var httpResquest: HTTPRequest! = HTTPRequest()
     var channels = [NSDictionary]()
