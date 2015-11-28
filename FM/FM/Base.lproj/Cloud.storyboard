@@ -23,26 +23,41 @@
                                 <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play_disc" translatesAutoresizingMaskIntoConstraints="NO" id="gdB-kz-gCG" customClass="PlayImageView" customModule="FM" customModuleProvider="target">
-                                <rect key="frame" x="160.5" y="160" width="280" height="280"/>
+                                <rect key="frame" x="160" y="160" width="280" height="280"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="280" id="T2m-rS-BfE"/>
                                     <constraint firstAttribute="width" constant="280" id="g8L-tj-GoK"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkZ-4t-dFv">
+                                <rect key="frame" x="260" y="520" width="80" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="jat-z4-fqW"/>
+                                    <constraint firstAttribute="height" constant="30" id="mOT-UA-6LL"/>
+                                </constraints>
+                                <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="onPauseClicked:" destination="rAo-Au-31s" eventType="touchUpInside" id="7GY-lX-4ad"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="aCh-4U-x63" firstAttribute="top" secondItem="jkZ-4t-dFv" secondAttribute="bottom" constant="50" id="6b2-Df-wL7"/>
                             <constraint firstItem="YmP-qC-pbQ" firstAttribute="top" secondItem="ou0-hK-DVd" secondAttribute="topMargin" id="CHB-bD-6Jo"/>
                             <constraint firstItem="YmP-qC-pbQ" firstAttribute="leading" secondItem="ou0-hK-DVd" secondAttribute="leadingMargin" constant="-20" id="GWc-uS-BFg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YmP-qC-pbQ" secondAttribute="trailing" constant="-20" id="VFE-Uy-xDp"/>
                             <constraint firstItem="gdB-kz-gCG" firstAttribute="centerX" secondItem="ou0-hK-DVd" secondAttribute="centerX" id="XZ6-ko-OPA"/>
                             <constraint firstItem="aCh-4U-x63" firstAttribute="top" secondItem="YmP-qC-pbQ" secondAttribute="bottom" id="plh-MI-dcI"/>
+                            <constraint firstItem="jkZ-4t-dFv" firstAttribute="centerX" secondItem="ou0-hK-DVd" secondAttribute="centerX" id="syJ-2g-fEK"/>
                             <constraint firstItem="gdB-kz-gCG" firstAttribute="centerY" secondItem="ou0-hK-DVd" secondAttribute="centerY" id="x6d-Or-BTS"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="playBgImageView" destination="YmP-qC-pbQ" id="2Wl-cc-kdd"/>
                         <outlet property="playQuanImageView" destination="gdB-kz-gCG" id="EWj-QU-y1f"/>
                     </connections>
                 </viewController>

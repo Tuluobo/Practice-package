@@ -17,17 +17,16 @@ class PlayImageView: UIImageView {
         super.init(coder: aDecoder)
         
         self.initImage()
-        
     }
     
-    let albumWidth: CGFloat = 160
+    let albumWidth: CGFloat = 184
     func initImage() {
         let xy = (self.frame.size.width - albumWidth) / 2
-        let albumImageView = UIImageView(frame: CGRectMake(xy, xy, albumWidth, albumWidth))
-        albumImageView.layer.cornerRadius = albumWidth / 2
-        albumImageView.clipsToBounds = true
+        self.albumImageView = UIImageView(frame: CGRectMake(xy, xy, albumWidth, albumWidth))
+        self.albumImageView!.clipsToBounds = true
+        self.albumImageView!.layer.cornerRadius = albumWidth / 2
         
-        self.addSubview(albumImageView)
+        self.addSubview(self.albumImageView!)
     }
 
     func startRoatating() {
@@ -39,4 +38,20 @@ class PlayImageView: UIImageView {
         
         self.layer.addAnimation(rotateAni, forKey: nil)
     }
+    
+    func pauseRotate() {
+        let pausedTime = self.layer.convertTime(CACurrentMediaTime(), toLayer: nil)
+        self.layer.speed = 0.0
+        self.layer.timeOffset = pausedTime
+    }
+    
+    func resumeRotate() {
+        let pausedTime = self.layer.timeOffset
+        self.layer.speed = 1.0
+        self.layer.timeOffset = 0.0
+        self.layer.beginTime = 0.0
+        let timeSincePause = self.layer.convertTime(CACurrentMediaTime(), toLayer: nil) - pausedTime
+        layer.beginTime = timeSincePause
+    }
+    
 }
