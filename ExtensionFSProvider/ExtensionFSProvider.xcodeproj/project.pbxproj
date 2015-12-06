@@ -1,0 +1,776 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D25E8D581C0F3D0300F4912A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25E8D571C0F3D0300F4912A /* AppDelegate.swift */; };
+		D25E8D5A1C0F3D0300F4912A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25E8D591C0F3D0300F4912A /* ViewController.swift */; };
+		D25E8D5D1C0F3D0400F4912A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D25E8D5B1C0F3D0400F4912A /* Main.storyboard */; };
+		D25E8D5F1C0F3D0400F4912A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D25E8D5E1C0F3D0400F4912A /* Assets.xcassets */; };
+		D25E8D621C0F3D0400F4912A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D25E8D601C0F3D0400F4912A /* LaunchScreen.storyboard */; };
+		D25E8D6D1C0F3D0400F4912A /* ExtensionFSProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25E8D6C1C0F3D0400F4912A /* ExtensionFSProviderTests.swift */; };
+		D25E8D781C0F3D0400F4912A /* ExtensionFSProviderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25E8D771C0F3D0400F4912A /* ExtensionFSProviderUITests.swift */; };
+		D25E8D8E1C0F3D2700F4912A /* DocumentPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25E8D8D1C0F3D2700F4912A /* DocumentPickerViewController.swift */; };
+		D25E8D911C0F3D2700F4912A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D25E8D8F1C0F3D2700F4912A /* MainInterface.storyboard */; };
+		D25E8D9C1C0F3D2700F4912A /* FileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25E8D9B1C0F3D2700F4912A /* FileProvider.swift */; };
+		D25E8DA01C0F3D2700F4912A /* FSProviderFileProvider.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D25E8D971C0F3D2700F4912A /* FSProviderFileProvider.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D25E8DA31C0F3D2700F4912A /* FSProvider.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D25E8D891C0F3D2700F4912A /* FSProvider.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D25E8D691C0F3D0400F4912A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D25E8D4C1C0F3D0300F4912A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D25E8D531C0F3D0300F4912A;
+			remoteInfo = ExtensionFSProvider;
+		};
+		D25E8D741C0F3D0400F4912A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D25E8D4C1C0F3D0300F4912A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D25E8D531C0F3D0300F4912A;
+			remoteInfo = ExtensionFSProvider;
+		};
+		D25E8D9E1C0F3D2700F4912A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D25E8D4C1C0F3D0300F4912A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D25E8D961C0F3D2700F4912A;
+			remoteInfo = FSProviderFileProvider;
+		};
+		D25E8DA11C0F3D2700F4912A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D25E8D4C1C0F3D0300F4912A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D25E8D881C0F3D2700F4912A;
+			remoteInfo = FSProvider;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D25E8DAA1C0F3D2700F4912A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D25E8DA31C0F3D2700F4912A /* FSProvider.appex in Embed App Extensions */,
+				D25E8DA01C0F3D2700F4912A /* FSProviderFileProvider.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D25E8D541C0F3D0300F4912A /* ExtensionFSProvider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExtensionFSProvider.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D25E8D571C0F3D0300F4912A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D25E8D591C0F3D0300F4912A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D25E8D5C1C0F3D0400F4912A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D25E8D5E1C0F3D0400F4912A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D25E8D611C0F3D0400F4912A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D25E8D631C0F3D0400F4912A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D25E8D681C0F3D0400F4912A /* ExtensionFSProviderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExtensionFSProviderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D25E8D6C1C0F3D0400F4912A /* ExtensionFSProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionFSProviderTests.swift; sourceTree = "<group>"; };
+		D25E8D6E1C0F3D0400F4912A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D25E8D731C0F3D0400F4912A /* ExtensionFSProviderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExtensionFSProviderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D25E8D771C0F3D0400F4912A /* ExtensionFSProviderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionFSProviderUITests.swift; sourceTree = "<group>"; };
+		D25E8D791C0F3D0400F4912A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D25E8D891C0F3D2700F4912A /* FSProvider.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FSProvider.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D25E8D8C1C0F3D2700F4912A /* FSProvider.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FSProvider.entitlements; sourceTree = "<group>"; };
+		D25E8D8D1C0F3D2700F4912A /* DocumentPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerViewController.swift; sourceTree = "<group>"; };
+		D25E8D901C0F3D2700F4912A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		D25E8D921C0F3D2700F4912A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D25E8D971C0F3D2700F4912A /* FSProviderFileProvider.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FSProviderFileProvider.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D25E8D9A1C0F3D2700F4912A /* FSProviderFileProvider.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FSProviderFileProvider.entitlements; sourceTree = "<group>"; };
+		D25E8D9B1C0F3D2700F4912A /* FileProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileProvider.swift; sourceTree = "<group>"; };
+		D25E8D9D1C0F3D2700F4912A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D25E8D511C0F3D0300F4912A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D25E8D651C0F3D0400F4912A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D25E8D701C0F3D0400F4912A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D25E8D861C0F3D2700F4912A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D25E8D941C0F3D2700F4912A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D25E8D4B1C0F3D0300F4912A = {
+			isa = PBXGroup;
+			children = (
+				D25E8D561C0F3D0300F4912A /* ExtensionFSProvider */,
+				D25E8D6B1C0F3D0400F4912A /* ExtensionFSProviderTests */,
+				D25E8D761C0F3D0400F4912A /* ExtensionFSProviderUITests */,
+				D25E8D8A1C0F3D2700F4912A /* FSProvider */,
+				D25E8D981C0F3D2700F4912A /* FSProviderFileProvider */,
+				D25E8D551C0F3D0300F4912A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D25E8D551C0F3D0300F4912A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D25E8D541C0F3D0300F4912A /* ExtensionFSProvider.app */,
+				D25E8D681C0F3D0400F4912A /* ExtensionFSProviderTests.xctest */,
+				D25E8D731C0F3D0400F4912A /* ExtensionFSProviderUITests.xctest */,
+				D25E8D891C0F3D2700F4912A /* FSProvider.appex */,
+				D25E8D971C0F3D2700F4912A /* FSProviderFileProvider.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D25E8D561C0F3D0300F4912A /* ExtensionFSProvider */ = {
+			isa = PBXGroup;
+			children = (
+				D25E8D571C0F3D0300F4912A /* AppDelegate.swift */,
+				D25E8D591C0F3D0300F4912A /* ViewController.swift */,
+				D25E8D5B1C0F3D0400F4912A /* Main.storyboard */,
+				D25E8DAB1C0F3E5500F4912A /* Supporting Files */,
+			);
+			path = ExtensionFSProvider;
+			sourceTree = "<group>";
+		};
+		D25E8D6B1C0F3D0400F4912A /* ExtensionFSProviderTests */ = {
+			isa = PBXGroup;
+			children = (
+				D25E8D6C1C0F3D0400F4912A /* ExtensionFSProviderTests.swift */,
+				D25E8D6E1C0F3D0400F4912A /* Info.plist */,
+			);
+			path = ExtensionFSProviderTests;
+			sourceTree = "<group>";
+		};
+		D25E8D761C0F3D0400F4912A /* ExtensionFSProviderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D25E8D771C0F3D0400F4912A /* ExtensionFSProviderUITests.swift */,
+				D25E8D791C0F3D0400F4912A /* Info.plist */,
+			);
+			path = ExtensionFSProviderUITests;
+			sourceTree = "<group>";
+		};
+		D25E8D8A1C0F3D2700F4912A /* FSProvider */ = {
+			isa = PBXGroup;
+			children = (
+				D25E8D8D1C0F3D2700F4912A /* DocumentPickerViewController.swift */,
+				D25E8D8F1C0F3D2700F4912A /* MainInterface.storyboard */,
+				D25E8D921C0F3D2700F4912A /* Info.plist */,
+				D25E8D8B1C0F3D2700F4912A /* Supporting Files */,
+			);
+			path = FSProvider;
+			sourceTree = "<group>";
+		};
+		D25E8D8B1C0F3D2700F4912A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D25E8D8C1C0F3D2700F4912A /* FSProvider.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D25E8D981C0F3D2700F4912A /* FSProviderFileProvider */ = {
+			isa = PBXGroup;
+			children = (
+				D25E8D9B1C0F3D2700F4912A /* FileProvider.swift */,
+				D25E8D9D1C0F3D2700F4912A /* Info.plist */,
+				D25E8D991C0F3D2700F4912A /* Supporting Files */,
+			);
+			path = FSProviderFileProvider;
+			sourceTree = "<group>";
+		};
+		D25E8D991C0F3D2700F4912A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D25E8D9A1C0F3D2700F4912A /* FSProviderFileProvider.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D25E8DAB1C0F3E5500F4912A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D25E8D5E1C0F3D0400F4912A /* Assets.xcassets */,
+				D25E8D601C0F3D0400F4912A /* LaunchScreen.storyboard */,
+				D25E8D631C0F3D0400F4912A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D25E8D531C0F3D0300F4912A /* ExtensionFSProvider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D25E8D7C1C0F3D0400F4912A /* Build configuration list for PBXNativeTarget "ExtensionFSProvider" */;
+			buildPhases = (
+				D25E8D501C0F3D0300F4912A /* Sources */,
+				D25E8D511C0F3D0300F4912A /* Frameworks */,
+				D25E8D521C0F3D0300F4912A /* Resources */,
+				D25E8DAA1C0F3D2700F4912A /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D25E8D9F1C0F3D2700F4912A /* PBXTargetDependency */,
+				D25E8DA21C0F3D2700F4912A /* PBXTargetDependency */,
+			);
+			name = ExtensionFSProvider;
+			productName = ExtensionFSProvider;
+			productReference = D25E8D541C0F3D0300F4912A /* ExtensionFSProvider.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D25E8D671C0F3D0400F4912A /* ExtensionFSProviderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D25E8D7F1C0F3D0400F4912A /* Build configuration list for PBXNativeTarget "ExtensionFSProviderTests" */;
+			buildPhases = (
+				D25E8D641C0F3D0400F4912A /* Sources */,
+				D25E8D651C0F3D0400F4912A /* Frameworks */,
+				D25E8D661C0F3D0400F4912A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D25E8D6A1C0F3D0400F4912A /* PBXTargetDependency */,
+			);
+			name = ExtensionFSProviderTests;
+			productName = ExtensionFSProviderTests;
+			productReference = D25E8D681C0F3D0400F4912A /* ExtensionFSProviderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D25E8D721C0F3D0400F4912A /* ExtensionFSProviderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D25E8D821C0F3D0400F4912A /* Build configuration list for PBXNativeTarget "ExtensionFSProviderUITests" */;
+			buildPhases = (
+				D25E8D6F1C0F3D0400F4912A /* Sources */,
+				D25E8D701C0F3D0400F4912A /* Frameworks */,
+				D25E8D711C0F3D0400F4912A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D25E8D751C0F3D0400F4912A /* PBXTargetDependency */,
+			);
+			name = ExtensionFSProviderUITests;
+			productName = ExtensionFSProviderUITests;
+			productReference = D25E8D731C0F3D0400F4912A /* ExtensionFSProviderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		D25E8D881C0F3D2700F4912A /* FSProvider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D25E8DA71C0F3D2700F4912A /* Build configuration list for PBXNativeTarget "FSProvider" */;
+			buildPhases = (
+				D25E8D851C0F3D2700F4912A /* Sources */,
+				D25E8D861C0F3D2700F4912A /* Frameworks */,
+				D25E8D871C0F3D2700F4912A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FSProvider;
+			productName = FSProvider;
+			productReference = D25E8D891C0F3D2700F4912A /* FSProvider.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		D25E8D961C0F3D2700F4912A /* FSProviderFileProvider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D25E8DA41C0F3D2700F4912A /* Build configuration list for PBXNativeTarget "FSProviderFileProvider" */;
+			buildPhases = (
+				D25E8D931C0F3D2700F4912A /* Sources */,
+				D25E8D941C0F3D2700F4912A /* Frameworks */,
+				D25E8D951C0F3D2700F4912A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FSProviderFileProvider;
+			productName = FSProviderFileProvider;
+			productReference = D25E8D971C0F3D2700F4912A /* FSProviderFileProvider.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D25E8D4C1C0F3D0300F4912A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Tuluobo;
+				TargetAttributes = {
+					D25E8D531C0F3D0300F4912A = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					D25E8D671C0F3D0400F4912A = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = D25E8D531C0F3D0300F4912A;
+					};
+					D25E8D721C0F3D0400F4912A = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = D25E8D531C0F3D0300F4912A;
+					};
+					D25E8D881C0F3D2700F4912A = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					D25E8D961C0F3D2700F4912A = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 4QRC4C5SWY;
+					};
+				};
+			};
+			buildConfigurationList = D25E8D4F1C0F3D0300F4912A /* Build configuration list for PBXProject "ExtensionFSProvider" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D25E8D4B1C0F3D0300F4912A;
+			productRefGroup = D25E8D551C0F3D0300F4912A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D25E8D531C0F3D0300F4912A /* ExtensionFSProvider */,
+				D25E8D671C0F3D0400F4912A /* ExtensionFSProviderTests */,
+				D25E8D721C0F3D0400F4912A /* ExtensionFSProviderUITests */,
+				D25E8D881C0F3D2700F4912A /* FSProvider */,
+				D25E8D961C0F3D2700F4912A /* FSProviderFileProvider */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D25E8D521C0F3D0300F4912A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D25E8D621C0F3D0400F4912A /* LaunchScreen.storyboard in Resources */,
+				D25E8D5F1C0F3D0400F4912A /* Assets.xcassets in Resources */,
+				D25E8D5D1C0F3D0400F4912A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D25E8D661C0F3D0400F4912A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D25E8D711C0F3D0400F4912A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D25E8D871C0F3D2700F4912A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D25E8D911C0F3D2700F4912A /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D25E8D951C0F3D2700F4912A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D25E8D501C0F3D0300F4912A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D25E8D5A1C0F3D0300F4912A /* ViewController.swift in Sources */,
+				D25E8D581C0F3D0300F4912A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D25E8D641C0F3D0400F4912A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D25E8D6D1C0F3D0400F4912A /* ExtensionFSProviderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D25E8D6F1C0F3D0400F4912A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D25E8D781C0F3D0400F4912A /* ExtensionFSProviderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D25E8D851C0F3D2700F4912A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D25E8D8E1C0F3D2700F4912A /* DocumentPickerViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D25E8D931C0F3D2700F4912A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D25E8D9C1C0F3D2700F4912A /* FileProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D25E8D6A1C0F3D0400F4912A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D25E8D531C0F3D0300F4912A /* ExtensionFSProvider */;
+			targetProxy = D25E8D691C0F3D0400F4912A /* PBXContainerItemProxy */;
+		};
+		D25E8D751C0F3D0400F4912A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D25E8D531C0F3D0300F4912A /* ExtensionFSProvider */;
+			targetProxy = D25E8D741C0F3D0400F4912A /* PBXContainerItemProxy */;
+		};
+		D25E8D9F1C0F3D2700F4912A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D25E8D961C0F3D2700F4912A /* FSProviderFileProvider */;
+			targetProxy = D25E8D9E1C0F3D2700F4912A /* PBXContainerItemProxy */;
+		};
+		D25E8DA21C0F3D2700F4912A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D25E8D881C0F3D2700F4912A /* FSProvider */;
+			targetProxy = D25E8DA11C0F3D2700F4912A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D25E8D5B1C0F3D0400F4912A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D25E8D5C1C0F3D0400F4912A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D25E8D601C0F3D0400F4912A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D25E8D611C0F3D0400F4912A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D25E8D8F1C0F3D2700F4912A /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D25E8D901C0F3D2700F4912A /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D25E8D7A1C0F3D0400F4912A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D25E8D7B1C0F3D0400F4912A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D25E8D7D1C0F3D0400F4912A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = ExtensionFSProvider/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tuluobo.ExtensionFSProvider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D25E8D7E1C0F3D0400F4912A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = ExtensionFSProvider/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tuluobo.ExtensionFSProvider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D25E8D801C0F3D0400F4912A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ExtensionFSProviderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tuluobo.ExtensionFSProviderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExtensionFSProvider.app/ExtensionFSProvider";
+			};
+			name = Debug;
+		};
+		D25E8D811C0F3D0400F4912A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ExtensionFSProviderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tuluobo.ExtensionFSProviderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExtensionFSProvider.app/ExtensionFSProvider";
+			};
+			name = Release;
+		};
+		D25E8D831C0F3D0400F4912A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ExtensionFSProviderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tuluobo.ExtensionFSProviderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ExtensionFSProvider;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		D25E8D841C0F3D0400F4912A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ExtensionFSProviderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tuluobo.ExtensionFSProviderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ExtensionFSProvider;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+		D25E8DA51C0F3D2700F4912A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = FSProviderFileProvider/FSProviderFileProvider.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = FSProviderFileProvider/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tuluobo.ExtensionFSProvider.FSProviderFileProvider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D25E8DA61C0F3D2700F4912A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = FSProviderFileProvider/FSProviderFileProvider.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = FSProviderFileProvider/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tuluobo.ExtensionFSProvider.FSProviderFileProvider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D25E8DA81C0F3D2700F4912A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = FSProvider/FSProvider.entitlements;
+				INFOPLIST_FILE = FSProvider/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tuluobo.ExtensionFSProvider.FSProvider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D25E8DA91C0F3D2700F4912A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = FSProvider/FSProvider.entitlements;
+				INFOPLIST_FILE = FSProvider/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tuluobo.ExtensionFSProvider.FSProvider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D25E8D4F1C0F3D0300F4912A /* Build configuration list for PBXProject "ExtensionFSProvider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D25E8D7A1C0F3D0400F4912A /* Debug */,
+				D25E8D7B1C0F3D0400F4912A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D25E8D7C1C0F3D0400F4912A /* Build configuration list for PBXNativeTarget "ExtensionFSProvider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D25E8D7D1C0F3D0400F4912A /* Debug */,
+				D25E8D7E1C0F3D0400F4912A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D25E8D7F1C0F3D0400F4912A /* Build configuration list for PBXNativeTarget "ExtensionFSProviderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D25E8D801C0F3D0400F4912A /* Debug */,
+				D25E8D811C0F3D0400F4912A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D25E8D821C0F3D0400F4912A /* Build configuration list for PBXNativeTarget "ExtensionFSProviderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D25E8D831C0F3D0400F4912A /* Debug */,
+				D25E8D841C0F3D0400F4912A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D25E8DA41C0F3D2700F4912A /* Build configuration list for PBXNativeTarget "FSProviderFileProvider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D25E8DA51C0F3D2700F4912A /* Debug */,
+				D25E8DA61C0F3D2700F4912A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D25E8DA71C0F3D2700F4912A /* Build configuration list for PBXNativeTarget "FSProvider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D25E8DA81C0F3D2700F4912A /* Debug */,
+				D25E8DA91C0F3D2700F4912A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D25E8D4C1C0F3D0300F4912A /* Project object */;
+}
