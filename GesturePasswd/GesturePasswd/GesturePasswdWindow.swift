@@ -7,15 +7,24 @@
 //
 
 import UIKit
-
+/**
+ 设置密码的状态类型
+ 
+ - SETPWD:  第一次设置
+ - SETPWD2: 第二次确认设置
+ - CHECK:   验证
+ - RESET:   重置
+ */
 enum GestureType {
     case SETPWD
     case SETPWD2
     case CHECK
     case RESET
 }
-
-protocol GesturePasswdWindowDelegete {
+/**
+ *  手势密码协议
+ */
+protocol GesturePasswdWindowDelegate {
     func setPwdSuccess()    //设置成功
     func checkPwdSuccess()  //验证成功
     func checkPwdFailed()   //验证失败
@@ -26,7 +35,7 @@ class GesturePasswdWindow: UIWindow {
     private var btnSelectArr = [UIButton]()
     private var btnViews = [UIButton]()
     
-    var degelete: GesturePasswdWindowDelegete!
+    var degelete: GesturePasswdWindowDelegate!
     //九宫格按钮间距
     private let bMargin: CGFloat = 25
     //设置九宫格的按钮大小
@@ -50,10 +59,13 @@ class GesturePasswdWindow: UIWindow {
             }
         }
     }
-    var borderColor = UIColor(red: 126/255, green: 126/255, blue: 126/255, alpha: 1.0)
     var labelTitle: UILabel!
-    var inlineColor = UIColor(red: 238/255, green: 238/255, blue: 238/255, alpha: 1.0)
     var selectImage = UIImage(named: "btnSelect")
+    // 边框颜色
+    var borderColor = UIColor(red: 126/255, green: 126/255, blue: 126/255, alpha: 1.0)
+    // 连线颜色
+    var inlineColor = UIColor(red: 238/255, green: 238/255, blue: 238/255, alpha: 1.0)
+    
     
     //单例
     class var sharedInstance: GesturePasswdWindow {
@@ -80,7 +92,7 @@ class GesturePasswdWindow: UIWindow {
         self.nineBtnsView()
         self.backBtnView()
     }
-    
+    // 标题LabelView
     private func titleLabelView() {
         let widthLabel: CGFloat = width!
         self.labelTitle = UILabel(frame: CGRectMake(0, upAnddownMargin!*3, widthLabel, 20))
@@ -89,6 +101,7 @@ class GesturePasswdWindow: UIWindow {
         labelTitle.textAlignment = NSTextAlignment.Center
         self.addSubview(labelTitle)
     }
+    // 九个按钮View
     private func nineBtnsView(){
         
         let bY = upAnddownMargin!*5
@@ -108,6 +121,7 @@ class GesturePasswdWindow: UIWindow {
         }
 
     }
+    // 返回按钮
     private func backBtnView() {
         let backBtn = UIButton(frame: CGRectMake(width!-140, 3 * (bMargin+self.bWidth!)+upAnddownMargin!*5, 120, 20))
         backBtn.setTitle("忘记手势密码", forState: UIControlState.Normal)
@@ -117,6 +131,7 @@ class GesturePasswdWindow: UIWindow {
         self.rootViewController?.view.addSubview(backBtn)
     }
     
+    // 返回操作
     func backPreView(){
         self.hidden = true
         self.resignKeyWindow()
@@ -244,7 +259,6 @@ class GesturePasswdWindow: UIWindow {
         }
         // 有按钮
         self.drawLine(nil)
-        
     }
     
     func drawLine(point: CGPoint?){

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, GesturePasswdWindowDelegete {
+class ViewController: UIViewController, GesturePasswdWindowDelegate {
 
     var gesturePwd = GesturePasswdWindow.sharedInstance
     
