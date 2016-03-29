@@ -10,7 +10,7 @@
 
 GesturePasswdWindow类继承UIWindow。
 
-GesturePasswdWindowdegelete是他的代理协议，包含三个方法，都需要实现。
+GesturePasswdWindowdelegate是他的代理协议，包含三个方法，都需要实现。
 
 ## 联系我
 博客地址：[秃萝卜-http://www.tuluobo.com](http://www.tuluobo.com)
