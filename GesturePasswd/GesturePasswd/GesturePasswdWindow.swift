@@ -36,13 +36,13 @@ class GesturePasswdWindow: UIWindow {
     private var btnViews = [UIButton]()
     
     var degelete: GesturePasswdWindowDelegate!
-    //九宫格按钮间距
+    // 九宫格按钮间距
     private let bMargin: CGFloat = 25
-    //设置九宫格的按钮大小
+    // 设置九宫格的按钮大小
     private var bWidth: CGFloat!
-    //window总宽
+    // window总宽
     private var width: CGFloat!
-    //设置上下边距
+    // 设置上下边距
     private var upAnddownMargin: CGFloat!
     
     var gestureType: GestureType! {
@@ -249,7 +249,7 @@ class GesturePasswdWindow: UIWindow {
         }
         return password
     }
-    
+    // 重写drawRect方法
     override func drawRect(rect: CGRect) {
         
         super.drawRect(rect)
